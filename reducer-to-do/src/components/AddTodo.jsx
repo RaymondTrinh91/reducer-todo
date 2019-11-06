@@ -32,9 +32,13 @@ const AddTodo = () => {
                     />
                     <button type="submit">Add Todo</button>
                 </form>
+                <button 
+                    onClick={() => dispatch({ type:"DELETE_COMPLETED" })}>
+                        Delete Completed
+                    </button>
             </div>
             <div>
-                <TodoList state={state}/>
+                <TodoList state={state} dispatch={dispatch} />
             </div>
         </div>
     )
